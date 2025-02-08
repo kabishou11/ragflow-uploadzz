@@ -129,4 +129,5 @@ def parse_chunks_with_check(filename):
     
 # 是否请求成功
 def is_succeed(response):
-    return response.get("retcode") == 0
+    # 20250208：增加对code字段的判断，因为新版ragflow返回字段名由retcode改为code了，保留retcode兼容旧版ragflow
+    return response.get("retcode") == 0 or response.get("code") == 0
