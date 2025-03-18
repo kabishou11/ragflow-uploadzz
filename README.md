@@ -13,6 +13,7 @@ conda create -n ragflow-upload python=3.10.13 -y
 ### 安装依赖
 ```shell
 pip install -r requirements.txt
+pip install -e .  
 ```
 
 ## 复制并配置[ragflows/configs.py](ragflows/configs.py)
